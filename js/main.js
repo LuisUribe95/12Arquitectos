@@ -87,17 +87,31 @@
     }
 })
 
+   jQuery(document).ready(function($) {
+    // Agregamos un delay de 300ms para asegurar que el DOM esté listo
+    setTimeout(function() {
+        var testimonialCarousel = $(".testimonial-carousel");
+        
+        // Forzamos la destrucción de cualquier instancia previa
+        testimonialCarousel.trigger('destroy.owl.carousel'); 
 
-    // Testimonials carousel
-    $('.testimonial-carousel').owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        loop: true,
-        nav: false,
-        dots: true,
-        items: 1,
-        dotsData: true,
-    });
+        testimonialCarousel.owlCarousel({
+            autoplay: true,
+            smartSpeed: 1000,
+            margin:5,
+            loop: true,
+            center: true,
+            dots: true,
+            nav: false,
+            responsive: {
+                0:{ items:2},
+                768:{ items:2 },
+                992:{ items:2 }
+            }
+        });
+        console.log("Carrusel de testimonios inicializado");
+    }, 300);
+});
 
     
 })(jQuery);
