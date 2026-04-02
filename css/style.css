@@ -148,6 +148,7 @@ h6,
     font-weight: 500;
     text-transform: uppercase;
     outline: none;
+    
 }
 
 .navbar .navbar-nav .nav-link:hover,
@@ -287,7 +288,7 @@ h6,
     background-size: cover;
 }
 .page-header.contacto {
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/galeria/WhatsApp\ Image\ 2024-11-02\ at\ 10.35.37\ AM\ \(2\).jpeg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/galeria/1.jpeg) center center no-repeat;
     background-size: cover;
 }
 
