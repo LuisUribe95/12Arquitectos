@@ -7,6 +7,16 @@
 .w-50 img{
     width: 50%;
 }
+.owl-carousel .owl-item img.about-img{
+    height: 100vh;
+    object-fit: cover;
+}
+
+.img-services{
+    height: 400px;
+    object-fit: cover;
+}
+
 
 h1,
 h2,
@@ -156,7 +166,7 @@ h6,
 }
 
 .logoW30{
-    width: 30%;
+    width: 20% !important;
     transition: .5s;
 }
 
