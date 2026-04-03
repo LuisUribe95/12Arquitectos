@@ -18,7 +18,7 @@
 
     // Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
+        if ($(this).scrollTop() > 50) {
             $('.sticky-top').addClass('shadow-sm').css('top', '0px');
             $('.logoDoce').addClass('logoW30');
         } else {

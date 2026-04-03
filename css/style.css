@@ -161,13 +161,24 @@ h6,
     transition: .5s;
 }
 
+/* Navbar reducido en scroll */
+.navbar.sticky-top.shadow-sm .nav-link {
+    padding: 15px 0 !important;
+    transition: .5s;
+}
+
+.navbar.sticky-top.shadow-sm {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 .logoDoce{
     width: 25%;
     transition: .5s;
 }
 
 .logoW30{
-    width: 20% !important;
+    width: 15% !important;
     transition: .5s;
 }
 
