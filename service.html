@@ -5,11 +5,32 @@
     <meta charset="utf-8">
     <title>Servicios de Arquitectura, Construcción y Diseño | Saltillo</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="servicios arquitectura, proyectos arquitectónicos, administración obras, diseño interiores, construcción Saltillo, mantenimiento edificios, fabricantes herrerías" name="keywords">
-    <meta content="Servicios profesionales de arquitectura en Saltillo: Proyectos arquitectónicos, administración y ejecución de obras, diseño y decoración de interiores, construcción, mantenimiento y fabricación de herrerías y carpinterías." name="description">
+    <meta
+        content="servicios arquitectura, proyectos arquitectónicos, administración obras, diseño interiores, construcción Saltillo, mantenimiento edificios, fabricantes herrerías"
+        name="keywords">
+    <meta
+        content="Servicios profesionales de arquitectura en Saltillo: Proyectos arquitectónicos, administración y ejecución de obras, diseño y decoración de interiores, construcción, mantenimiento y fabricación de herrerías y carpinterías."
+        name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,8 +122,10 @@
     <!-- Page Header End -->
 
     <!-- Image Sequence Animation Start -->
-    <div id="scrollAnimationWrap" class="w-100 p-0" style="height: 600vh; position: relative; z-index: 1; overflow: visible;">
-        <div class="w-100 overflow-hidden" style="position: sticky; top: 0; height: 100vh; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; z-index: 10;">
+    <div id="scrollAnimationWrap" class="w-100 p-0"
+        style="height: 600vh; position: relative; z-index: 1; overflow: visible;">
+        <div class="w-100 overflow-hidden"
+            style="position: sticky; top: 0; height: 100vh; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; z-index: 10;">
             <img id="sequenceAnimationImg" class="w-100 h-auto" src="img/animacion/ezgif-frame-001.jpg"
                 alt="Animación de Proyecto" style="display: block; object-fit: cover; max-height: 100vh;">
         </div>
@@ -127,21 +150,21 @@
             window.addEventListener('scroll', () => {
                 const rect = wrap.getBoundingClientRect();
                 const scrollableDistance = wrap.offsetHeight - window.innerHeight;
-                
+
                 let progress = 0;
-                
+
                 if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
                     progress = Math.abs(rect.top) / scrollableDistance;
                 } else if (rect.bottom < window.innerHeight) {
                     progress = 1;
                 }
-                
+
                 // Clamp progress between 0 and 1
                 progress = Math.max(0, Math.min(1, progress));
-                
+
                 // Determine which frame corresponds to the scroll progress
                 let frameIndex = Math.min(totalFrames - 1, Math.floor(progress * totalFrames));
-                
+
                 if (preloadedImages[frameIndex] && preloadedImages[frameIndex].complete) {
                     seqImg.src = preloadedImages[frameIndex].src;
                 }
@@ -167,7 +190,7 @@
                                 diseños
                                 arquitectónicos exclusivos y versátiles.
                             </p>
-                           <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
                         </div>
                     </div>
                 </div>
@@ -188,7 +211,7 @@
                                 comercial o industrial.
                                 Supervisamos y cuidamos cada detalle, siendo la calidad nuestra prioridad.
                             </p>
-                           <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
                         </div>
                     </div>
                 </div>
@@ -201,7 +224,7 @@
                             <img class="mb-4" src="img/icons/icon-7.png" alt="Icon">
                             <h3 class="mb-3">DISEÑO Y DECORACIÓN</h3>
                             <p class="mb-4">Diseño y transformación de diversos espacios.</p>
-                           <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
                         </div>
                     </div>
                 </div>
@@ -226,7 +249,7 @@
                             <h3 class="mb-3">MANTENIMIENTO</h3>
                             <p class="mb-4">Mantenimiento preventivo y correctivo en áreas residenciales, comerciales e
                                 industriales.</p>
-                           <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
                         </div>
                     </div>
                 </div>
@@ -242,7 +265,7 @@
                                 remodelaciones y ampliaciones de cualquier tipo ya sean industriales, comerciales y
                                 residenciales.
                             </p>
-                           <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
                         </div>
                     </div>
                 </div>
@@ -264,7 +287,7 @@
                             <img class="mb-4" src="img/icons/icon-10.png" alt="Icon">
                             <h3 class="mb-3">FABRICANTES</h3>
                             <p class="mb-4">Fabricantes de herrerías y carpinterías.</p>
-                           <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
                         </div>
                     </div>
                 </div>
