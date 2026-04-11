@@ -18,11 +18,13 @@
 
     // Sticky Navbar
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
+        const scroll = $(this).scrollTop();
+        
+        if (scroll > 50) {
+            $('.navbar').addClass('shadow-sm scrolled');
             $('.logoDoce').addClass('logoW30');
         } else {
-            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
+            $('.navbar').removeClass('shadow-sm scrolled');
             $('.logoDoce').removeClass('logoW30');
         }
     });

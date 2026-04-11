@@ -4,8 +4,6 @@
 }
 
 html, body {
-    overflow-x: hidden;
-    overflow-y: auto;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -131,15 +129,24 @@ h6,
     margin: 0 auto;
 }
 
-/* Navbar Escritorio */
-.navbar.navbar-expand-lg {
-    min-height: 110px;
-    align-items: center;
-    transition: min-height 0.3s ease;
+/* Navbar Sticky Fix */
+.sticky-top {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1020 !important;
 }
 
-.navbar.navbar-expand-lg.sticky-top {
-    min-height: 75px;
+/* Navbar Altura */
+.navbar {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    transition: padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
 }
 
 /* Ajuste Menu Mobile */

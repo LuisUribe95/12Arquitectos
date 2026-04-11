@@ -101,8 +101,8 @@
     <!-- Page Header End -->
 
     <!-- Image Sequence Animation Start -->
-    <div id="scrollAnimationWrap" class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s" style="height: 300vh;">
-        <div class="w-100 overflow-hidden" style="position: sticky; top: 0; height: 100vh; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center;">
+    <div id="scrollAnimationWrap" class="w-100 p-0" style="height: 600vh; position: relative; z-index: 1; overflow: visible;">
+        <div class="w-100 overflow-hidden" style="position: sticky; top: 0; height: 100vh; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; z-index: 10;">
             <img id="sequenceAnimationImg" class="w-100 h-auto" src="img/animacion/ezgif-frame-001.jpg"
                 alt="Animación de Proyecto" style="display: block; object-fit: cover; max-height: 100vh;">
         </div>
@@ -129,14 +129,15 @@
                 const scrollableDistance = wrap.offsetHeight - window.innerHeight;
                 
                 let progress = 0;
-                // Only start scrubbing when the wrap reaches the top of the screen
-                if (rect.top <= 0) {
+                
+                if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
                     progress = Math.abs(rect.top) / scrollableDistance;
+                } else if (rect.bottom < window.innerHeight) {
+                    progress = 1;
                 }
                 
                 // Clamp progress between 0 and 1
-                if (progress < 0) progress = 0;
-                if (progress > 1) progress = 1;
+                progress = Math.max(0, Math.min(1, progress));
                 
                 // Determine which frame corresponds to the scroll progress
                 let frameIndex = Math.min(totalFrames - 1, Math.floor(progress * totalFrames));
