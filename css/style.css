@@ -1,4 +1,26 @@
 /********** Template CSS **********/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+html {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
 :root {
     --primary: #B78D65;
     --light: #F8F8F8;
@@ -6,6 +28,21 @@
 }
 .w-50 img{
     width: 50%;
+}
+
+.container, .container-fluid, .container-xxl {
+    max-width: 100% !important;
+    overflow-x: hidden;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.row > * {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
 }
 .owl-carousel .owl-item img.about-img{
     height: 100vh;
@@ -92,6 +129,87 @@ h6,
     width: 30% !important;
     display: block;
     margin: 0 auto;
+}
+
+/* Navbar Escritorio */
+.navbar.navbar-expand-lg {
+    min-height: 110px;
+    align-items: center;
+    transition: min-height 0.3s ease;
+}
+
+.navbar.navbar-expand-lg.sticky-top {
+    min-height: 75px;
+}
+
+/* Ajuste Menu Mobile */
+@media (max-width: 991.98px) {
+    .navbar.navbar-expand-lg {
+        padding: 0.75rem 0 !important;
+        min-height: 90px;
+        align-items: center;
+    }
+    
+    .navbar .navbar-brand {
+        margin-left: 1rem !important;
+        padding: 0 !important;
+    }
+    
+    .navbar .navbar-toggler {
+        margin-left: auto !important;
+        margin-right: 1rem !important;
+        padding: 0.75rem !important;
+    }
+    
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        z-index: 999;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-nav {
+        padding: 0 1rem !important;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 1.2rem 0.5rem !important;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 1.25rem;
+        text-align: left;
+    }
+    
+    .logoDoce {
+        height: 70px !important;
+        width: auto !important;
+    }
+}
+
+.logoDoce {
+    width: 120px;
+    height: auto;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.logoDoce.logoW30 {
+    width: 80px !important;
+    height: auto !important;
+}
+
+@media (max-width: 991.98px) {
+    .logoDoce {
+        width: 75px !important;
+        height: auto !important;
+    }
+    
+    .logoDoce.logoW30 {
+        width: 55px !important;
+        height: auto !important;
+    }
 }
 
 .btn-square {
@@ -272,6 +390,37 @@ h6,
     height: 60px;
 }
 
+@media (max-width: 768px) {
+    .header-carousel .owl-dots {
+        position: absolute;
+        width: auto;
+        height: auto;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        right: auto;
+        top: auto;
+    }
+    
+    .header-carousel .owl-dots .owl-dot {
+        width: 60px;
+        height: 40px;
+        margin: 0;
+        opacity: 0.4;
+    }
+    
+    .header-carousel .owl-dots .owl-dot.active {
+        width: 70px;
+        height: 45px;
+        opacity: 1;
+    }
+}
+
 .header-carousel .owl-dots .owl-dot img {
     position: absolute;
     width: 100%;
@@ -279,7 +428,6 @@ h6,
     object-fit: cover;
     padding: 2px;
     transition: .5s;
-    opacity: .3;
 }
 
 .header-carousel .owl-dots .owl-dot.active img {
