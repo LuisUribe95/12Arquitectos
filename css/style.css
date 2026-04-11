@@ -3,7 +3,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -24,11 +25,14 @@ html {
     --light: #F8F8F8;
     --dark: #252525;
 }
-.w-50 img{
+
+.w-50 img {
     width: 50%;
 }
 
-.container, .container-fluid, .container-xxl {
+.container,
+.container-fluid,
+.container-xxl {
     max-width: 100% !important;
     overflow-x: hidden;
 }
@@ -38,16 +42,17 @@ html {
     margin-right: 0 !important;
 }
 
-.row > * {
+.row>* {
     padding-left: 0.75rem;
     padding-right: 0.75rem;
 }
-.owl-carousel .owl-item img.about-img{
+
+.owl-carousel .owl-item img.about-img {
     height: 100vh;
     object-fit: cover;
 }
 
-.img-services{
+.img-services {
     height: 400px;
     object-fit: cover;
 }
@@ -113,17 +118,17 @@ h6,
     background-color: #7f0000;
 }
 
-.redDoce{
-    color:#7f0000 ;
+.redDoce {
+    color: #7f0000;
 }
 
-.img-team{
+.img-team {
     width: 50%;
     display: block;
     margin: 0 auto;
 }
 
-.img-clientes{
+.img-clientes {
     width: 30% !important;
     display: block;
     margin: 0 auto;
@@ -156,18 +161,18 @@ h6,
         min-height: 90px;
         align-items: center;
     }
-    
+
     .navbar .navbar-brand {
         margin-left: 1rem !important;
         padding: 0 !important;
     }
-    
+
     .navbar .navbar-toggler {
         margin-left: auto !important;
         margin-right: 1rem !important;
         padding: 0.75rem !important;
     }
-    
+
     .navbar-collapse {
         position: absolute;
         top: 100%;
@@ -175,20 +180,20 @@ h6,
         right: 0;
         background: white;
         z-index: 999;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     .navbar-nav {
         padding: 0 1rem !important;
     }
-    
+
     .navbar-nav .nav-link {
         padding: 1.2rem 0.5rem !important;
         border-bottom: 1px solid #f0f0f0;
         font-size: 1.25rem;
         text-align: left;
     }
-    
+
     .logoDoce {
         height: 70px !important;
         width: auto !important;
@@ -212,7 +217,7 @@ h6,
         width: 75px !important;
         height: auto !important;
     }
-    
+
     .logoDoce.logoW30 {
         width: 55px !important;
         height: auto !important;
@@ -273,7 +278,7 @@ h6,
     font-weight: 500;
     text-transform: uppercase;
     outline: none;
-    
+
 }
 
 .navbar .navbar-nav .nav-link:hover,
@@ -297,12 +302,12 @@ h6,
     padding-bottom: 0 !important;
 }
 
-.logoDoce{
+.logoDoce {
     width: 25%;
     transition: .5s;
 }
 
-.logoW30{
+.logoW30 {
     width: 15% !important;
     transition: .5s;
 }
@@ -413,14 +418,14 @@ h6,
         right: auto;
         top: auto;
     }
-    
+
     .header-carousel .owl-dots .owl-dot {
         width: 60px;
         height: 40px;
         margin: 0;
         opacity: 0.4;
     }
-    
+
     .header-carousel .owl-dots .owl-dot.active {
         width: 70px;
         height: 45px;
@@ -442,19 +447,22 @@ h6,
 }
 
 .page-header.somos {
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/galeria/123123123123.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/galeria/123123123123.webp) center center no-repeat;
     background-size: cover;
 }
+
 .page-header.servicios {
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/galeria/FACH\ D.JPG) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/galeria/FACH\ D.webp) center center no-repeat;
     background-size: cover;
 }
+
 .page-header.proyectos {
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-1.webp) center center no-repeat;
     background-size: cover;
 }
+
 .page-header.contacto {
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/galeria/1.jpeg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/galeria/1.webp) center center no-repeat;
     background-size: cover;
 }
 
