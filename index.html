@@ -73,7 +73,7 @@
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-50 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <img class="position-absolute top-50 start-50 translate-middle" src="img/logo/lg.webp" alt="Icon">
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/logo/lg.webp" loading="lazy" alt="Icon">
     </div>
     <!-- Spinner End -->
 
@@ -83,20 +83,20 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+0123456789"><i
+                    <a class="text-white px-2" href="tel:+0123456789"><i
                             class="fa fa-phone-alt text-primary me-2"></i>844 264 0385</a>
-                    <a class="text-body px-2" href="mailto:admin@12arquitectos.com.mx"><i
+                    <a class="text-white px-2" href="mailto:admin@12arquitectos.com.mx"><i
                             class="fa fa-envelope-open text-primary me-2"></i>admin@12arquitectos.com.mx</a>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square btn-outline-body me-1"
-                        href="https://www.facebook.com/profile.php?id=100085962446127" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
+                        href="https://www.facebook.com/profile.php?id=100085962446127" target="_blank"
+                        aria-label="Ir a nuestra pagina de facebook"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-sm-square btn-outline-body me-0"
-                        href="https://www.instagram.com/doce_arquitectos/" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
+                        href="https://www.instagram.com/doce_arquitectos/" target="_blank"
+                        aria-label="Ir a nuestra pagina de instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
         data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <img class="me-3 logoDoce" src="img/logo/lg.webp" alt="Icon">
+            <img class="me-3 logoDoce" src="img/logo/lg.webp" loading="lazy" alt="Icon">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -125,62 +125,69 @@
     </nav>
     <!-- Navbar End -->
 
+    <main>
+        <!-- Carousel Start -->
+        <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative"
+                    data-dot="<img src='img/slider/FACHA.webp'  alt='Fachada principal del proyecto arquitectónico' loading='lazy'>">
+                    <img class="img-fluid" src="img/slider/FACHA.webp" loading="lazy" alt="Fachada inovacion">
+                    <div class="owl-carousel-inner">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-1 text-white animated slideInDown">INNOVACIÓN EN DISEÑO.
+                                        COMPROMISO
+                                        EN CADA PROYECTO.</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-3">Un equipo de trabajo que brinda
+                                        soluciones estéticas, funcionales, ambientales e innovadoras.</p>
 
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/slider/FACHA.webp'>">
-                <img class="img-fluid" src="img/slider/FACHA.webp" alt="Fachada inovacion">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">INNOVACIÓN EN DISEÑO. COMPROMISO
-                                    EN CADA PROYECTO.</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Un equipo de trabajo que brinda
-                                    soluciones estéticas, funcionales, ambientales e innovadoras.</p>
-
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/slider/LOCA.webp'>">
-                <img class="img-fluid" src="img/slider/LOCA.webp" alt="fachada local">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">ARQUITECTURA QUE IMPULSA TU
-                                    NEGOCIO.</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Creamos espacios funcionales y estéticos
-                                    que reflejan la visión y el éxito de tu empresa.</p>
+                <div class="owl-carousel-item position-relative"
+                    data-dot="<img src='img/slider/LOCA.webp' alt='Fachada de local comercial' loading='lazy'>">
+                    <img class="img-fluid" src="img/slider/LOCA.webp" loading="lazy" alt="fachada local">
+                    <div class="owl-carousel-inner">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-1 text-white animated slideInDown">ARQUITECTURA QUE IMPULSA TU
+                                        NEGOCIO.</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-3">Creamos espacios funcionales y
+                                        estéticos
+                                        que reflejan la visión y el éxito de tu empresa.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="owl-carousel-item position-relative" data-dot="<img src='img/slider/INDB.webp'>">
-                <img class="img-fluid" src="img/slider/INDB.webp" alt="fachada industrial">
-                <div class="owl-carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h1 class="display-1 text-white animated slideInDown">EXPERIENCIA INDUSTRIAL. INNOVACIÓN
-                                    COMERCIAL.</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-3">Desde la concepción hasta la ejecución,
-                                    garantizamos calidad en cada etapa de tu proyecto.</p>
+                <div class="owl-carousel-item position-relative"
+                    data-dot="<img src='img/slider/INDB.webp' alt='Fachada industrial' loading='lazy'>">
+                    <img class="img-fluid" src="img/slider/INDB.webp" loading="lazy" alt="fachada industrial">
+                    <div class="owl-carousel-inner">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                                <div class="col-10 col-lg-8">
+                                    <h1 class="display-1 text-white animated slideInDown">EXPERIENCIA INDUSTRIAL.
+                                        INNOVACIÓN
+                                        COMERCIAL.</h1>
+                                    <p class="fs-5 fw-medium text-white mb-4 pb-3">Desde la concepción hasta la
+                                        ejecución,
+                                        garantizamos calidad en cada etapa de tu proyecto.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Carousel End -->
+        <!-- Carousel End -->
 
 
-    <!-- Facts Start 
+        <!-- Facts Start 
     <div class="container-xxl py-5">
         <div class="container pt-5">
             <div class="row g-4">
@@ -214,309 +221,318 @@
             </div>
         </div>
     </div>-->
-    <!-- Facts End -->
+        <!-- Facts End -->
 
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img">
-                        <img class="img-fluid" src="img/galeria/123123123123.webp" alt="about img">
-                        <img class="img-fluid" src="img/galeria/3.webp" alt="about img">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h4 class="section-title">Acerca de nosotros</h4>
-                    <h1 class="display-5 mb-4">DOCE ARQUITECTOS</h1>
-                    <p>Somos un equipo de trabajo que se da la tarea de cubrir la necesidad de desarrollo de
-                        proyectos donde el principal enfoque es brindar soluciones estéticas, funcionales,
-                        ambientales e innovadoras.
-                    </p>
-
-                    <div class="d-flex align-items-center mb-5">
-                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary"
-                            style="width: 120px; height: 120px;">
-                            <h1 class="display-1 mb-n2" data-toggle="counter-up">5</h1>
-                        </div>
-                        <div class="ps-4">
-                            <h3>Años</h3>
-                            <h3 class="mb-0">De Experiencia</h3>
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img">
+                            <img class="img-fluid" src="img/galeria/123123123123.webp" loading="lazy" alt="about img">
+                            <img class="img-fluid" src="img/galeria/3.webp" loading="lazy" alt="about img">
                         </div>
                     </div>
-                    <a class="btn btn-primary py-3 px-5" href="about.html">Leer más</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h4 class="section-title">Acerca de nosotros</h4>
+                        <h1 class="display-5 mb-4">DOCE ARQUITECTOS</h1>
+                        <p>Somos un equipo de trabajo que se da la tarea de cubrir la necesidad de desarrollo de
+                            proyectos donde el principal enfoque es brindar soluciones estéticas, funcionales,
+                            ambientales e innovadoras.
+                        </p>
 
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Nuestros servicios</h4>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="img/service-1.webp" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-5.webp" alt="Icon">
-                            <h3 class="mb-3">PROYECTOS ARQUITECTÓNICOS</h3>
-                            <p class="mb-4">Combinamos nuestra experiencia y conocimiento para realizar proyecciones de
-                                diseños
-                                arquitectónicos exclusivos y versátiles.
-                            </p>
-                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a>-->
+                        <div class="d-flex align-items-center mb-5">
+                            <div class="d-flex flex-shrink-0 align-items-center justify-content-center border border-5 border-primary"
+                                style="width: 120px; height: 120px;">
+                                <h1 class="display-1 mb-n2" data-toggle="counter-up">5</h1>
+                            </div>
+                            <div class="ps-4">
+                                <h3>Años</h3>
+                                <h3 class="mb-0">De Experiencia</h3>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="img/service-2.webp" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-6.webp" alt="Icon">
-                            <h3 class="mb-3">ADMINISTRACIÓN Y EJECUCIÓN.</h3>
-                            <p class="mb-4">Administramos la construcción de su proyecto, sea este residencial,
-                                comercial o industrial.
-                                Supervisamos y cuidamos cada detalle, siendo la calidad nuestra prioridad.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="img/service-3.webp" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-7.webp" alt="Icon">
-                            <h3 class="mb-3">DISEÑO Y DECORACIÓN</h3>
-                            <p class="mb-4">Diseño y transformación de diversos espacios.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="img/service-4.webp" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-8.webp" alt="Icon">
-                            <h3 class="mb-3">MANTENIMIENTO</h3>
-                            <p class="mb-4">Mantenimiento preventivo y correctivo en áreas residenciales, comerciales e
-                                industriales.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="img/service-5.webp" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-9.webp" alt="Icon">
-                            <h3 class="mb-3">CONSTRUCCIÓN Y EJECUCIÓN</h3>
-                            <p class="mb-4">Realizamos levantamientos topografía, cálculos estructurales, diseños,
-                                construcciones,
-                                remodelaciones y ampliaciones de cualquier tipo ya sean industriales, comerciales y
-                                residenciales.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item d-flex position-relative text-center h-100">
-                        <img class="bg-img" src="img/service-6.webp" alt="">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-10.webp" alt="Icon">
-                            <h3 class="mb-3">FABRICANTES</h3>
-                            <p class="mb-4">La posibilidad de diseñar y fabricar piezas completamente a medida, desde el
-                                concepto inicial hasta la instalación final, asegurando que cada detalle cumpla con las
-                                expectativas del cliente.</p>
-
-                        </div>
+                        <a class="btn btn-primary py-3 px-5" href="about.html">Leer más</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Service End -->
+        <!-- About End -->
 
 
-    <!-- Feature Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h4 class="section-title">¿Por qué elegirnos?</h4>
-                    <h1 class="display-5 mb-4">¿Por qué deberías confiar en nosotros?</h1>
-                    <p class="mb-4"> No solo construimos, creamos alianzas basadas en la honestidad y la transparencia,
-                        garantizando que cada proyecto sea una colaboración exitosa de principio a fin.</p>
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-2.webp" alt="Icon">
-                                <div class="ms-4">
-                                    <h3>Pasión y Compromiso</h3>
-                                    <p class="mb-0">Nos distinguimos por nuestra pasión por el diseño y la innovación,
-                                        ofreciendo un servicio altamente profesional y personalizado.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-3.webp" alt="Icon">
-                                <div class="ms-4">
-                                    <h3>Calidad Garantizada</h3>
-                                    <p class="mb-0">Contamos con un equipo de profesionistas y personal altamente
-                                        calificado para asegurar la correcta ejecución de cada proyecto</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="d-flex align-items-start">
-                                <img class="flex-shrink-0" src="img/icons/icon-4.webp" alt="Icon">
-                                <div class="ms-4">
-                                    <h3>Diseño a tu medida</h3>
-                                    <p class="mb-0">Nos apegamos a las necesidades y requerimientos específicos de cada
-                                        cliente, buscando siempre soluciones estéticas, funcionales y ambientales que
-                                        sean 100% personalizadas.</p>
-                                </div>
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h4 class="section-title">Nuestros servicios</h4>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item d-flex position-relative text-center h-100">
+                            <img class="bg-img" src="img/service-1.webp" loading="lazy" alt="PROYECTOS ARQUITECTÓNICOS">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-5.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">PROYECTOS ARQUITECTÓNICOS</h3>
+                                <p class="mb-4">Combinamos nuestra experiencia y conocimiento para realizar proyecciones
+                                    de
+                                    diseños
+                                    arquitectónicos exclusivos y versátiles.
+                                </p>
+                                <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a>-->
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="feature-img">
-                        <img class="img-fluid" src="img/galeria/TERR 1.webp" alt="">
-                        <img class="img-fluid" src="img/galeria/TERR 3.webp" alt="">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item d-flex position-relative text-center h-100">
+                            <img class="bg-img" src="img/service-2.webp" loading="lazy" alt="ADMINISTRACIÓN Y EJECUCIÓN">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-6.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">ADMINISTRACIÓN Y EJECUCIÓN.</h3>
+                                <p class="mb-4">Administramos la construcción de su proyecto, sea este residencial,
+                                    comercial o industrial.
+                                    Supervisamos y cuidamos cada detalle, siendo la calidad nuestra prioridad.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item d-flex position-relative text-center h-100">
+                            <img class="bg-img" src="img/service-3.webp" loading="lazy" alt="DISEÑO Y DECORACIÓN">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-7.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">DISEÑO Y DECORACIÓN</h3>
+                                <p class="mb-4">Diseño y transformación de diversos espacios.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item d-flex position-relative text-center h-100">
+                            <img class="bg-img" src="img/service-4.webp" loading="lazy" alt="MANTENIMIENTO">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-8.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">MANTENIMIENTO</h3>
+                                <p class="mb-4">Mantenimiento preventivo y correctivo en áreas residenciales,
+                                    comerciales e
+                                    industriales.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item d-flex position-relative text-center h-100">
+                            <img class="bg-img" src="img/service-5.webp" loading="lazy" alt="CONSTRUCCIÓN Y EJECUCIÓN">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-9.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">CONSTRUCCIÓN Y EJECUCIÓN</h3>
+                                <p class="mb-4">Realizamos levantamientos topografía, cálculos estructurales, diseños,
+                                    construcciones,
+                                    remodelaciones y ampliaciones de cualquier tipo ya sean industriales, comerciales y
+                                    residenciales.
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item d-flex position-relative text-center h-100">
+                            <img class="bg-img" src="img/service-6.webp" loading="lazy" alt="FABRICANTES">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-10.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">FABRICANTES</h3>
+                                <p class="mb-4">La posibilidad de diseñar y fabricar piezas completamente a medida,
+                                    desde el
+                                    concepto inicial hasta la instalación final, asegurando que cada detalle cumpla con
+                                    las
+                                    expectativas del cliente.</p>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Feature End -->
+        <!-- Service End -->
 
 
-    <!-- Project Start -->
-    <div class="container-xxl project py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Nuestros proyectos</h4>
-                <h1 class="display-5 mb-4">Visita nuestros últimos proyectos y nuestras obras innovadoras</h1>
-            </div>
-            <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="col-lg-4">
-                    <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
-                            data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
-                            <h3 class="m-0">PROYECTO CH-1</h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                            data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
-                            <h3 class="m-0">REMODELACIÓN REST-CAVA</h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
-                            data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
-                            <h3 class="m-0">NAVE INDUSTRIAL</h3>
-                        </button>
-                        <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0"
-                            data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
-                            <h3 class="m-0">ELEKTRA MIRASIERRA</h3>
-                        </button>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="tab-content w-100">
-                        <div class="tab-pane fade show active" id="tab-pane-1">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100"
-                                            src="img/galeria/FACH C.webp" style="object-fit: cover;" alt="">
+        <!-- Feature Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h4 class="section-title">¿Por qué elegirnos?</h4>
+                        <h1 class="display-5 mb-4">¿Por qué deberías confiar en nosotros?</h1>
+                        <p class="mb-4"> No solo construimos, creamos alianzas basadas en la honestidad y la
+                            transparencia,
+                            garantizando que cada proyecto sea una colaboración exitosa de principio a fin.</p>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <img class="flex-shrink-0" src="img/icons/icon-2.webp" loading="lazy" alt="Icon">
+                                    <div class="ms-4">
+                                        <h3>Pasión y Compromiso</h3>
+                                        <p class="mb-0">Nos distinguimos por nuestra pasión por el diseño y la
+                                            innovación,
+                                            ofreciendo un servicio altamente profesional y personalizado.</p>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">DISEÑO ARQUITECTÓNICO DE VIVIENDA RESIDENCIAL.</h1>
-                                    <p class="mb-4"> Saltillo Coah.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Levantamiento topográfico y mecánica
-                                        de suelos.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Planos arquitectónicos.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Planos ejecutivos.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Planos oficiales.</p>
-                                    <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Leer más</a> -->
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-2">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100"
-                                            src="img/galeria/FACH D.webp" style="object-fit: cover;" alt="">
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <img class="flex-shrink-0" src="img/icons/icon-3.webp" loading="lazy" alt="Icon">
+                                    <div class="ms-4">
+                                        <h3>Calidad Garantizada</h3>
+                                        <p class="mb-0">Contamos con un equipo de profesionistas y personal altamente
+                                            calificado para asegurar la correcta ejecución de cada proyecto</p>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">DISEÑO DE INTERIORES</h1>
-                                    <p class="mb-4">Parras, Coah.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Distribución de espacios.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Propuesta de materiales y
-                                        mobiliario.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Planos arquitectónicos.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Planos ejecutivos.</p>
-                                    <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Leer más</a> -->
                                 </div>
                             </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-3">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/galeria/1.webp"
-                                            style="object-fit: cover;" alt="">
+                            <div class="col-12">
+                                <div class="d-flex align-items-start">
+                                    <img class="flex-shrink-0" src="img/icons/icon-4.webp" loading="lazy" alt="Icon">
+                                    <div class="ms-4">
+                                        <h3>Diseño a tu medida</h3>
+                                        <p class="mb-0">Nos apegamos a las necesidades y requerimientos específicos de
+                                            cada
+                                            cliente, buscando siempre soluciones estéticas, funcionales y ambientales
+                                            que
+                                            sean 100% personalizadas.</p>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">NAVE INDUSTRIAL</h1>
-                                    <p class="mb-4">Derramadero, Coah.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Ejecución de mantenimientos</p>
-                                    <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Leer más</a>-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="tab-pane-4">
-                            <div class="row g-4">
-                                <div class="col-md-6" style="min-height: 350px;">
-                                    <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100"
-                                            src="img/galeria/TERR 1.webp" style="object-fit: cover;" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <h1 class="mb-3">DEMOLICIONES</h1>
-                                    <p class="mb-4">Saltillo, Coah.</p>
-                                    <p><i class="fa fa-check text-primary me-3"></i>Ejecución de proyecto.</p>
-                                    <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Leer más</a> -->
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-img">
+                            <img class="img-fluid" src="img/galeria/TERR 1.webp" loading="lazy" alt="img">
+                            <img class="img-fluid" src="img/galeria/TERR 3.webp" loading="lazy" alt="img">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!--
+        </div>
+        <!-- Feature End -->
+
+
+        <!-- Project Start -->
+        <div class="container-xxl project py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h4 class="section-title">Nuestros proyectos</h4>
+                    <h1 class="display-5 mb-4">Visita nuestros últimos proyectos y nuestras obras innovadoras</h1>
+                </div>
+                <div class="row g-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-4">
+                        <div class="nav nav-pills d-flex justify-content-between w-100 h-100 me-4">
+                            <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4 active"
+                                data-bs-toggle="pill" data-bs-target="#tab-pane-1" type="button">
+                                <h3 class="m-0">PROYECTO CH-1</h3>
+                            </button>
+                            <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
+                                data-bs-toggle="pill" data-bs-target="#tab-pane-2" type="button">
+                                <h3 class="m-0">REMODELACIÓN REST-CAVA</h3>
+                            </button>
+                            <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-4"
+                                data-bs-toggle="pill" data-bs-target="#tab-pane-3" type="button">
+                                <h3 class="m-0">NAVE INDUSTRIAL</h3>
+                            </button>
+                            <button class="nav-link w-100 d-flex align-items-center text-start p-4 mb-0"
+                                data-bs-toggle="pill" data-bs-target="#tab-pane-4" type="button">
+                                <h3 class="m-0">ELEKTRA MIRASIERRA</h3>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="tab-content w-100">
+                            <div class="tab-pane fade show active" id="tab-pane-1">
+                                <div class="row g-4">
+                                    <div class="col-md-6" style="min-height: 350px;">
+                                        <div class="position-relative h-100">
+                                            <img class="position-absolute img-fluid w-100 h-100"
+                                                src="img/galeria/FACH C.webp" style="object-fit: cover;" loading="lazy" alt="Fachada principal del proyecto arquitectónico">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="mb-3">DISEÑO ARQUITECTÓNICO DE VIVIENDA RESIDENCIAL.</h1>
+                                        <p class="mb-4"> Saltillo Coah.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Levantamiento topográfico y
+                                            mecánica
+                                            de suelos.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Planos arquitectónicos.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Planos ejecutivos.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Planos oficiales.</p>
+                                        <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Leer más</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-pane-2">
+                                <div class="row g-4">
+                                    <div class="col-md-6" style="min-height: 350px;">
+                                        <div class="position-relative h-100">
+                                            <img class="position-absolute img-fluid w-100 h-100"
+                                                src="img/galeria/FACH D.webp" style="object-fit: cover;" loading="lazy" alt="Fachada secundaria del proyecto arquitectónico">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="mb-3">DISEÑO DE INTERIORES</h1>
+                                        <p class="mb-4">Parras, Coah.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Distribución de espacios.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Propuesta de materiales y
+                                            mobiliario.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Planos arquitectónicos.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Planos ejecutivos.</p>
+                                        <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Leer más</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-pane-3">
+                                <div class="row g-4">
+                                    <div class="col-md-6" style="min-height: 350px;">
+                                        <div class="position-relative h-100">
+                                            <img class="position-absolute img-fluid w-100 h-100"
+                                                src="img/galeria/1.webp" style="object-fit: cover;" loading="lazy" alt="Nave industrial">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="mb-3">NAVE INDUSTRIAL</h1>
+                                        <p class="mb-4">Derramadero, Coah.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Ejecución de mantenimientos</p>
+                                        <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Leer más</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-pane-4">
+                                <div class="row g-4">
+                                    <div class="col-md-6" style="min-height: 350px;">
+                                        <div class="position-relative h-100">
+                                            <img class="position-absolute img-fluid w-100 h-100"
+                                                src="img/galeria/TERR 1.webp" style="object-fit: cover;" loading="lazy" alt="Demolición de estructura">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h1 class="mb-3">DEMOLICIONES</h1>
+                                        <p class="mb-4">Saltillo, Coah.</p>
+                                        <p><i class="fa fa-check text-primary me-3"></i>Ejecución de proyecto.</p>
+                                        <!-- <a href="" class="btn btn-primary py-3 px-5 mt-3">Leer más</a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
             <div class="text-center mx-auto mb-5 wow fadeInUptext-center mx-auto mb-5 wow fadeInUp">
                 <a href="" class="btn btn-primary py-3 px-5 mt-5 ">Conocer más</a>
             </div>-->
 
+            </div>
         </div>
-    </div>
-    <!-- Project End -->
+        <!-- Project End -->
 
 
-    <!-- Team Start 
+        <!-- Team Start 
     <div class="container-xxl py-5 ">
         <div class="container modal-dialog-centered">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
@@ -544,69 +560,71 @@
      Team End -->
 
 
-    <!-- Appointment Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h4 class="section-title">Contáctanos</h4>
-                    <h1 class="display-5 mb-4">Haz una cita para iniciar el proyecto de tus sueños</h1>
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="d-flex">
-                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
-                                    style="width: 65px; height: 65px;">
-                                    <i class="fa fa-2x fa-phone-alt text-primary"></i>
-                                </div>
-                                <div class="ms-4">
-                                    <p class="mb-2">Llámanos</p>
-                                    <h3 class="mb-0">844 264 0385</h3>
+        <!-- Appointment Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h4 class="section-title">Contáctanos</h4>
+                        <h1 class="display-5 mb-4">Haz una cita para iniciar el proyecto de tus sueños</h1>
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
+                                        style="width: 65px; height: 65px;">
+                                        <i class="fa fa-2x fa-phone-alt text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-2">Llámanos</p>
+                                        <h3 class="mb-0">844 264 0385</h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="d-flex">
-                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
-                                    style="width: 65px; height: 65px;">
-                                    <i class="fa fa-2x fa-envelope-open text-primary"></i>
-                                </div>
-                                <div class="ms-4">
-                                    <p class="mb-2">Envíanos un email</p>
-                                    <h3 class="mb-0"><a
-                                            href="mailto:admin@12arquitectos.com.mx">admin@12arquitectos.com.mx</a>
-                                    </h3>
+                            <div class="col-12">
+                                <div class="d-flex">
+                                    <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-light"
+                                        style="width: 65px; height: 65px;">
+                                        <i class="fa fa-2x fa-envelope-open text-primary"></i>
+                                    </div>
+                                    <div class="ms-4">
+                                        <p class="mb-2">Envíanos un email</p>
+                                        <h3 class="mb-0"><a
+                                                href="mailto:admin@12arquitectos.com.mx">admin@12arquitectos.com.mx</a>
+                                        </h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row g-3">
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Tu nombre" style="height: 55px;">
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="email" class="form-control" placeholder="Tu correo electrónico"
-                                style="height: 55px;">
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <input type="text" class="form-control" placeholder="Tu teléfono" style="height: 55px;">
-                        </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control" placeholder="Tu nombre" style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="email" class="form-control" placeholder="Tu correo electrónico"
+                                    style="height: 55px;">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control" placeholder="Tu teléfono" style="height: 55px;">
+                            </div>
 
 
 
-                        <div class="col-12">
-                            <textarea class="form-control" rows="5" placeholder="Tu mensaje"></textarea>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                            <div class="col-12">
+                                <textarea class="form-control" rows="5" placeholder="Tu mensaje"></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Appointment End -->
+        <!-- Appointment End -->
+    </main>
+
 
 
 
@@ -623,11 +641,11 @@
                             href="mailto:admin@12arquitectos.com.mx">admin@12arquitectos.com.mx</a></p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-body me-1"
-                            href="https://www.facebook.com/profile.php?id=100085962446127" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
+                            href="https://www.facebook.com/profile.php?id=100085962446127" target="_blank"
+                            aria-label="Ir a nuestra pagina de facebook"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-body me-1"
-                            href="https://www.instagram.com/doce_arquitectos/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
+                            href="https://www.instagram.com/doce_arquitectos/" target="_blank"
+                            aria-label="Ir a nuestra pagina de instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -656,7 +674,8 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Volver al inicio"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

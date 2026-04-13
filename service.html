@@ -59,7 +59,7 @@
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-50 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <img class="position-absolute top-50 start-50 translate-middle" src="img/logo/lg.webp" alt="Icon">
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/logo/lg.webp" loading="lazy" alt="Icon">
     </div>
     <!-- Spinner End -->
 
@@ -69,20 +69,20 @@
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-3">
-                    <a class="text-body px-2" href="tel:+0123456789"><i
+                    <a class="text-white px-2" href="tel:+0123456789"><i
                             class="fa fa-phone-alt text-primary me-2"></i>844 264 0385</a>
-                    <a class="text-body px-2" href="mailto:admin@12arquitectos.com.mx"><i
+                    <a class="text-white px-2" href="mailto:admin@12arquitectos.com.mx"><i
                             class="fa fa-envelope-open text-primary me-2"></i>admin@12arquitectos.com.mx</a>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square btn-outline-body me-1"
-                        href="https://www.facebook.com/profile.php?id=100085962446127" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
+                        href="https://www.facebook.com/profile.php?id=100085962446127" target="_blank"
+                        aria-label="Ir a nuestra pagina de facebook"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-sm-square btn-outline-body me-0"
-                        href="https://www.instagram.com/doce_arquitectos/" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
+                        href="https://www.instagram.com/doce_arquitectos/" target="_blank"
+                        aria-label="Ir a nuestra pagina de instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn"
         data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <img class="me-3 logoDoce" src="img/logo/lg.webp" alt="Icon">
+            <img class="me-3 logoDoce" src="img/logo/lg.webp" loading="lazy" alt="Icon">
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -111,249 +111,254 @@
     </nav>
     <!-- Navbar End -->
 
+    <main>
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header servicios py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <h1 class="display-1 text-white text-center animated slideInDown">Servicios</h1>
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header servicios py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <h1 class="display-1 text-white text-center animated slideInDown">Servicios</h1>
 
+            </div>
         </div>
-    </div>
-    <!-- Page Header End -->
+        <!-- Page Header End -->
 
-    <!-- Image Sequence Animation Start -->
-    <div id="scrollAnimationWrap" class="w-100 p-0"
-        style="height: 600vh; position: relative; z-index: 1; overflow: visible;">
-        <div class="w-100 overflow-hidden"
-            style="position: sticky; top: 0; height: 100vh; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; z-index: 10;">
-            <img id="sequenceAnimationImg" class="w-100 h-auto" src="img/animacion/ezgif-frame-001.webp"
-                alt="Animación de Proyecto" style="display: block; object-fit: cover; max-height: 100vh;">
+        <!-- Image Sequence Animation Start -->
+        <div id="scrollAnimationWrap" class="w-100 p-0"
+            style="height: 600vh; position: relative; z-index: 1; overflow: visible;">
+            <div class="w-100 overflow-hidden"
+                style="position: sticky; top: 0; height: 100vh; background-color: #f8f9fa; display: flex; align-items: center; justify-content: center; z-index: 10;">
+                <img id="sequenceAnimationImg" class="w-100 h-auto" src="img/animacion/ezgif-frame-001.webp"
+                    loading="lazy" alt="Animación de Proyecto" style="display: block; object-fit: cover; max-height: 100vh;">
+            </div>
         </div>
-    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const totalFrames = 40;
-            const seqImg = document.getElementById('sequenceAnimationImg');
-            const wrap = document.getElementById('scrollAnimationWrap');
-            const preloadedImages = [];
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const totalFrames = 40;
+                const seqImg = document.getElementById('sequenceAnimationImg');
+                const wrap = document.getElementById('scrollAnimationWrap');
+                const preloadedImages = [];
 
-            // Preload images to ensure smooth scrubbing
-            for (let i = 1; i <= totalFrames; i++) {
-                const img = new Image();
-                const frameNumber = String(i).padStart(3, '0');
-                img.src = `img/animacion/ezgif-frame-${frameNumber}.webp`;
-                preloadedImages.push(img);
-            }
-
-            // Scrub through frames on scroll
-            window.addEventListener('scroll', () => {
-                const rect = wrap.getBoundingClientRect();
-                const scrollableDistance = wrap.offsetHeight - window.innerHeight;
-
-                let progress = 0;
-
-                if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
-                    progress = Math.abs(rect.top) / scrollableDistance;
-                } else if (rect.bottom < window.innerHeight) {
-                    progress = 1;
+                // Preload images to ensure smooth scrubbing
+                for (let i = 1; i <= totalFrames; i++) {
+                    const img = new Image();
+                    const frameNumber = String(i).padStart(3, '0');
+                    img.src = `img/animacion/ezgif-frame-${frameNumber}.webp`;
+                    preloadedImages.push(img);
                 }
 
-                // Clamp progress between 0 and 1
-                progress = Math.max(0, Math.min(1, progress));
+                // Scrub through frames on scroll
+                window.addEventListener('scroll', () => {
+                    const rect = wrap.getBoundingClientRect();
+                    const scrollableDistance = wrap.offsetHeight - window.innerHeight;
 
-                // Determine which frame corresponds to the scroll progress
-                let frameIndex = Math.min(totalFrames - 1, Math.floor(progress * totalFrames));
+                    let progress = 0;
 
-                if (preloadedImages[frameIndex] && preloadedImages[frameIndex].complete) {
-                    seqImg.src = preloadedImages[frameIndex].src;
-                }
+                    if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+                        progress = Math.abs(rect.top) / scrollableDistance;
+                    } else if (rect.bottom < window.innerHeight) {
+                        progress = 1;
+                    }
+
+                    // Clamp progress between 0 and 1
+                    progress = Math.max(0, Math.min(1, progress));
+
+                    // Determine which frame corresponds to the scroll progress
+                    let frameIndex = Math.min(totalFrames - 1, Math.floor(progress * totalFrames));
+
+                    if (preloadedImages[frameIndex] && preloadedImages[frameIndex].complete) {
+                        seqImg.src = preloadedImages[frameIndex].src;
+                    }
+                });
             });
-        });
-    </script>
-    <!-- Image Sequence Animation End -->
+        </script>
+        <!-- Image Sequence Animation End -->
 
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h4 class="section-title">Nuestros servicios</h4>
-                <h1 class="display-5 mb-4">Enfocados en arquitectura moderna y diseño de interiores</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class=" d-flex position-relative text-center h-100">
-                        <div class="service-text p-5">
-                            <img class="mb-4 " src="img/icons/icon-5.webp" alt="Icon">
-                            <h3 class="mb-3">PROYECTOS ARQUITECTÓNICOS</h3>
-                            <p class="mb-4">Combinamos nuestra experiencia y conocimiento para realizar proyecciones de
-                                diseños
-                                arquitectónicos exclusivos y versátiles.
-                            </p>
-                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h4 class="section-title">Nuestros servicios</h4>
+                    <h1 class="display-5 mb-4">Enfocados en arquitectura moderna y diseño de interiores</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class=" d-flex position-relative text-center h-100">
+                            <div class="service-text p-5">
+                                <img class="mb-4 " src="img/icons/icon-5.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">PROYECTOS ARQUITECTÓNICOS</h3>
+                                <p class="mb-4">Combinamos nuestra experiencia y conocimiento para realizar proyecciones
+                                    de
+                                    diseños
+                                    arquitectónicos exclusivos y versátiles.
+                                </p>
+                                <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 wow fadeInUp " data-wow-delay="0.3s">
-                    <div class="item"> <img class="w-100 img-services" src="img/galeria/123123123123.webp"
-                            alt="Proyectos Arquitectónicos y construcción"></div>
-                </div>
+                    <div class="col-lg-6 col-md-6 wow fadeInUp " data-wow-delay="0.3s">
+                        <div class="item"> <img class="w-100 img-services" src="img/galeria/123123123123.webp"
+                                loading="lazy" alt="Proyectos Arquitectónicos y construcción"></div>
+                    </div>
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="item"><img class="w-100 img-services" src="img/galeria/3.webp"
-                            alt="Ejecución de diseños arquitectónicos versátiles"></div>
-                </div>
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="item"><img class="w-100 img-services" src="img/galeria/3.webp" loading="lazy" alt="Ejecución de diseños arquitectónicos versátiles"></div>
+                    </div>
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class=" d-flex position-relative text-center h-100">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-6.webp" alt="Icon">
-                            <h3 class="mb-3">ADMINISTRACIÓN Y EJECUCIÓN.</h3>
-                            <p class="mb-4">Administramos la construcción de su proyecto, sea este residencial,
-                                comercial o industrial.
-                                Supervisamos y cuidamos cada detalle, siendo la calidad nuestra prioridad.
-                            </p>
-                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class=" d-flex position-relative text-center h-100">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-6.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">ADMINISTRACIÓN Y EJECUCIÓN.</h3>
+                                <p class="mb-4">Administramos la construcción de su proyecto, sea este residencial,
+                                    comercial o industrial.
+                                    Supervisamos y cuidamos cada detalle, siendo la calidad nuestra prioridad.
+                                </p>
+                                <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex position-relative text-center h-100">
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex position-relative text-center h-100">
 
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-7.webp" alt="Icon">
-                            <h3 class="mb-3">DISEÑO Y DECORACIÓN</h3>
-                            <p class="mb-4">Diseño y transformación de diversos espacios.</p>
-                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-7.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">DISEÑO Y DECORACIÓN</h3>
+                                <p class="mb-4">Diseño y transformación de diversos espacios.</p>
+                                <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
 
-                    <div class="item"><img class="w-100 img-services" src="img/galeria/FACH C.jpg"
-                            alt="Diseño de interiores y transformacíón de espacios"></div>
-
-
-                </div>
+                        <div class="item"><img class="w-100 img-services" src="img/galeria/FACH C.webp"
+                                loading="lazy" alt="Diseño de interiores y transformacíón de espacios"></div>
 
 
+                    </div>
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="item"><img class="w-100 img-services" src="img/galeria/TERR 1.jpg"
-                            alt="Mantenimiento y remodelaciones de áreas residenciales"></div>
 
-                </div>
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex position-relative text-center h-100">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-8.webp" alt="Icon">
-                            <h3 class="mb-3">MANTENIMIENTO</h3>
-                            <p class="mb-4">Mantenimiento preventivo y correctivo en áreas residenciales, comerciales e
-                                industriales.</p>
-                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="item"><img class="w-100 img-services" src="img/galeria/TERR 1.webp"
+                                loading="lazy" alt="Mantenimiento y remodelaciones de áreas residenciales"></div>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex position-relative text-center h-100">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-8.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">MANTENIMIENTO</h3>
+                                <p class="mb-4">Mantenimiento preventivo y correctivo en áreas residenciales,
+                                    comerciales e
+                                    industriales.</p>
+                                <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class=" d-flex position-relative text-center h-100">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-9.webp" alt="Icon">
-                            <h3 class="mb-3">CONSTRUCCIÓN Y EJECUCIÓN</h3>
-                            <p class="mb-4">Realizamos levantamientos topografía, cálculos estructurales, diseños,
-                                construcciones,
-                                remodelaciones y ampliaciones de cualquier tipo ya sean industriales, comerciales y
-                                residenciales.
-                            </p>
-                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class=" d-flex position-relative text-center h-100">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-9.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">CONSTRUCCIÓN Y EJECUCIÓN</h3>
+                                <p class="mb-4">Realizamos levantamientos topografía, cálculos estructurales, diseños,
+                                    construcciones,
+                                    remodelaciones y ampliaciones de cualquier tipo ya sean industriales, comerciales y
+                                    residenciales.
+                                </p>
+                                <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="item"><img class="w-100 img-services" src="img/galeria/1.jpeg"
-                            alt="Construcciones industriales, comerciales y residenciales"></div>
-                </div>
-
-
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item"><img class="w-100 img-services" src="img/galeria/TERR 3.jpg"
-                                alt="Ejecución de topografía y cálculos estructurales"></div>
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="item"><img class="w-100 img-services" src="img/galeria/1.webp"
+                                loading="lazy" alt="Construcciones industriales, comerciales y residenciales"></div>
                     </div>
 
-                </div>
 
-                <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class=" d-flex position-relative text-center h-100">
-                        <div class="service-text p-5">
-                            <img class="mb-4" src="img/icons/icon-10.webp" alt="Icon">
-                            <h3 class="mb-3">FABRICANTES</h3>
-                            <p class="mb-4">Fabricantes de herrerías y carpinterías.</p>
-                            <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item"><img class="w-100 img-services" src="img/galeria/TERR 3.webp"
+                                    loading="lazy" alt="Ejecución de topografía y cálculos estructurales"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class=" d-flex position-relative text-center h-100">
+                            <div class="service-text p-5">
+                                <img class="mb-4" src="img/icons/icon-10.webp" loading="lazy" alt="Icon">
+                                <h3 class="mb-3">FABRICANTES</h3>
+                                <p class="mb-4">Fabricantes de herrerías y carpinterías.</p>
+                                <!-- <a class="btn" href=""><i class="fa fa-plus text-primary me-3"></i>Leer más</a> -->
+                            </div>
                         </div>
                     </div>
-                </div>
 
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="section-title">Clientes</h1>
-                <h4>Nuestra mejor carta de presentación es la confianza de quienes han creído en nuestra visión. Aquí
-                    algunos de nuestros clientes</h4>
-            </div>
-            <div class=" testimonial-carousel owl-carousel fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item text-center">
-                    <img src="img/clientes/minsa.webp" class="img-clientes"
-                        alt="Logo Cliente Minsa Modelos Industriales">
-                    <h3>ING. EDUARDO MENDOZA</h3>
-                    <span class="text-primary">MINSA MODELOS INDUSTRIALES DE SALTILLO</span>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img src="img/clientes/dacmi.webp" class="img-clientes" alt="Logo Cliente DACCMI Global Group">
-                    <h3>ING. JULIO CÉSAR GONZÁLEZ</h3>
-                    <span class="text-primary">DACCMI GLOBAL GROUP</span>
-                </div>
-                <div class="testimonial-item text-center">
-
-                    <h3>ARQ. OSCAR ALEJANDRO RINCÓN TORRES</h3>
-                    <span class="text-primary">VALLE DE LA PAZ</span>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img src="img/clientes/minsa.webp" class="img-clientes" alt="Logo Cliente Navarro Bros">
-                    <h3>ARQ. MIGUEL NAVARRO RAMÍREZ</h3>
-                    <span class="text-primary">NAVARRO BROS</span>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img src="img/clientes/sinergia.webp" class="img-clientes"
-                        alt="Logo Cliente Sinergia Dirección de Proyectos">
-                    <h3>ARQ. AMAURY HERNÁNDEZ HERNÁNDEZ</h3>
-                    <span class="text-primary">SINERGIA DIRECCIÓN DE PROYECTOS</span>
-                </div>
-                <div class="testimonial-item text-center">
-
-                    <h3>ARQ. HÉCTOR ARTURO GARCÍA MALGAREJO</h3>
-                    <span class="text-primary">RA 2015 INMUEBLES</span>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img src="img/clientes/anahuac.webp" class="img-clientes" alt="Logo Cliente Grupo Anáhuac">
-                    <h3>ARQ. VALERIA MARTÍNEZ HERNÁNDEZ</h3>
-                    <span class="text-primary">GRUPO ANÁHUAC</span>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Testimonial End -->
+        <!-- Service End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="section-title">Clientes</h1>
+                    <h4>Nuestra mejor carta de presentación es la confianza de quienes han creído en nuestra visión.
+                        Aquí
+                        algunos de nuestros clientes</h4>
+                </div>
+                <div class=" testimonial-carousel owl-carousel fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item text-center">
+                        <img src="img/clientes/minsa.webp" class="img-clientes"
+                            alt="Logo Cliente Minsa Modelos Industriales" loading="lazy">
+                        <h3>ING. EDUARDO MENDOZA</h3>
+                        <span class="text-primary">MINSA MODELOS INDUSTRIALES DE SALTILLO</span>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img src="img/clientes/dacmi.webp" class="img-clientes" alt="Logo Cliente DACCMI Global Group" loading="lazy">
+                        <h3>ING. JULIO CÉSAR GONZÁLEZ</h3>
+                        <span class="text-primary">DACCMI GLOBAL GROUP</span>
+                    </div>
+                    <div class="testimonial-item text-center">
+
+                        <h3>ARQ. OSCAR ALEJANDRO RINCÓN TORRES</h3>
+                        <span class="text-primary">VALLE DE LA PAZ</span>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img src="img/clientes/minsa.webp" class="img-clientes" alt="Logo Cliente Navarro Bros" loading="lazy">
+                        <h3>ARQ. MIGUEL NAVARRO RAMÍREZ</h3>
+                        <span class="text-primary">NAVARRO BROS</span>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img src="img/clientes/sinergia.webp" class="img-clientes" loading="lazy"
+                            alt="Logo Cliente Sinergia Dirección de Proyectos">
+                        <h3>ARQ. AMAURY HERNÁNDEZ HERNÁNDEZ</h3>
+                        <span class="text-primary">SINERGIA DIRECCIÓN DE PROYECTOS</span>
+                    </div>
+                    <div class="testimonial-item text-center">
+
+                        <h3>ARQ. HÉCTOR ARTURO GARCÍA MALGAREJO</h3>
+                        <span class="text-primary">RA 2015 INMUEBLES</span>
+                    </div>
+                    <div class="testimonial-item text-center">
+                        <img src="img/clientes/anahuac.webp" class="img-clientes" loading="lazy" alt="Logo Cliente Grupo Anáhuac">
+                        <h3>ARQ. VALERIA MARTÍNEZ HERNÁNDEZ</h3>
+                        <span class="text-primary">GRUPO ANÁHUAC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+    </main>
+
 
 
     <!-- Footer Start -->
@@ -368,11 +373,11 @@
                             href="mailto:admin@12arquitectos.com.mx">admin@12arquitectos.com.mx</a></p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square btn-outline-body me-1"
-                            href="https://www.facebook.com/profile.php?id=100085962446127" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
+                            href="https://www.facebook.com/profile.php?id=100085962446127" target="_blank"
+                            aria-label="Ir a nuestra pagina de facebook"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-body me-1"
-                            href="https://www.instagram.com/doce_arquitectos/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
+                            href="https://www.instagram.com/doce_arquitectos/" target="_blank"
+                            aria-label="Ir a nuestra pagina de instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -401,7 +406,8 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" aria-label="Volver al inicio"><i
+            class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

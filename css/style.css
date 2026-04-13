@@ -21,7 +21,7 @@ html {
 }
 
 :root {
-    --primary: #B78D65;
+    --primary: #906f4f;
     --light: #F8F8F8;
     --dark: #252525;
 }
@@ -269,6 +269,7 @@ h6,
     font-weight: 900;
     vertical-align: middle;
     margin-left: 8px;
+    font-display: swap;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -716,6 +717,7 @@ h6,
     content: "\f10d";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
+    font-display: swap;
     color: var(--primary);
     background: #FFFFFF;
     border-radius: 40px;
@@ -753,6 +755,7 @@ h6,
     position: relative;
     content: "\f105";
     font-family: "Font Awesome 5 Free";
+    font-display: swap;
     font-weight: 900;
     color: var(--primary);
     margin-right: 10px;
