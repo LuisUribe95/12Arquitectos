@@ -71,7 +71,7 @@
         dotsData: true,
     });
 
-    $('.owl-carousel').owlCarousel({
+    $('.owl-carousel:not(.project-gallery):not(.about-gallery)').owlCarousel({
     loop:true,
     margin:10,
     autoplay:true,
@@ -88,6 +88,36 @@
         }
     }
 })
+
+    $('.about-gallery').owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 0,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        nav: true,
+        dots: true,
+        smartSpeed: 1000,
+        navText: [
+            '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+            '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+        ]
+    });
+
+    $('.project-gallery').owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 0,
+        autoplay: false,
+        nav: true,
+        dots: true,
+        smartSpeed: 500,
+        navText: [
+            '<i class="fa fa-chevron-left" aria-hidden="true"></i>',
+            '<i class="fa fa-chevron-right" aria-hidden="true"></i>'
+        ]
+    });
 
    jQuery(document).ready(function($) {
     // Agregamos un delay de 300ms para asegurar que el DOM esté listo
@@ -117,4 +147,3 @@
 
     
 })(jQuery);
-

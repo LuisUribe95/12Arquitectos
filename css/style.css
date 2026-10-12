@@ -47,7 +47,7 @@ html {
     padding-right: 0.75rem;
 }
 
-.owl-carousel .owl-item img.about-img {
+.about-gallery .owl-item img.about-img {
     height: 100vh;
     object-fit: cover;
 }
@@ -238,6 +238,47 @@ h6,
     width: 48px;
     height: 48px;
 }
+
+.marquee {
+  width: 100%;
+  height: 90px;
+  background-color: var(--primary);
+  color:#FFFFFF;
+  /* border-top: 3px solid gray;
+  border-bottom: 3px solid gray; */
+  overflow: hidden;
+}
+
+.marquee li {
+  font-size: 50px;
+}
+
+.marquee__content {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: scrolling 20s linear infinite;
+}
+
+.marquee__item {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.marquee__item p {
+  margin: 0;
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(-35%) }
+}
+
+
 
 .btn-square,
 .btn-sm-square,
@@ -598,6 +639,74 @@ h6,
 
 .project .nav .nav-link.active h3 {
     color: #FFFFFF !important;
+}
+
+.project-gallery {
+    height: 350px;
+}
+
+.project-gallery .item,
+.project-gallery .item img {
+    width: 100%;
+    height: 350px;
+}
+
+.project-gallery .item img {
+    object-fit: cover;
+}
+
+.project-gallery .owl-nav,
+.about-gallery .owl-nav {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.project-gallery .owl-nav button,
+.about-gallery .owl-nav button {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, .55);
+    pointer-events: auto;
+}
+
+.project-gallery .owl-dots,
+.about-gallery .owl-dots {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.about-gallery .owl-dots {
+    position: relative;
+    bottom: auto;
+    margin-top: 12px;
+}
+
+.project-gallery .owl-dot span,
+.about-gallery .owl-dot span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .65);
+}
+
+.project-gallery .owl-dot.active span,
+.about-gallery .owl-dot.active span {
+    background: var(--primary);
 }
 
 
