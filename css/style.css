@@ -198,6 +198,8 @@ h6,
         height: 70px !important;
         width: auto !important;
     }
+
+    
 }
 
 .logoDoce {
@@ -222,6 +224,8 @@ h6,
         width: 55px !important;
         height: auto !important;
     }
+    
+    
 }
 
 .btn-square {
@@ -251,6 +255,16 @@ h6,
 
 .marquee li {
   font-size: 50px;
+}
+
+@media (max-width: 767.98px) {
+  .marquee {
+    height: 60px;
+  }
+
+  .marquee li {
+    font-size: 30px;
+  }
 }
 
 .marquee__content {
@@ -384,6 +398,10 @@ h6,
         visibility: visible;
         transition: .5s;
         opacity: 1;
+    }
+    .marquee{
+        height: 60px;
+       
     }
 }
 
