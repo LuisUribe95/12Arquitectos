@@ -251,10 +251,12 @@ h6,
   /* border-top: 3px solid gray;
   border-bottom: 3px solid gray; */
   overflow: hidden;
+  font-family: "Teko", sans-serif;
 }
 
 .marquee li {
   font-size: 30px;
+  margin: 2px;
 }
 
 @media (max-width: 767.98px) {
